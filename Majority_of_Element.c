@@ -2,10 +2,8 @@
 int main()
 {
     int  size,n;
-    printf("Enter the size of the array\n");
     scanf("%d",&size);
     int arr[size];
-    printf("Enter the elements of the array\n");
     for(n=0;n<size;n++)
     {
         scanf("%d",&arr[n]);
@@ -33,8 +31,8 @@ void findMajority(int arr[], int size)
     }
 
     if (maxCount > size/2)
-    printf("Majority element is %d",arr[index]);
+    printf("%d",arr[index]);
     else
-        printf("Majority Element does not exist" );
+        printf("-1" );
         return 0;
 }

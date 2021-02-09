@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,count=0,i,j;
+    int n,i,even=0,odd=0;
     scanf("%d",&n);
     int arr[n];
     for(i=0; i<n; i++)
@@ -10,14 +10,17 @@ int main()
     }
     for(i=0; i<n; i++)
     {
-        for(j=0; j<i; j++)
+        if(i%2==0)
         {
-            if(arr[i]==arr[j])
-                break;
+          even=even+arr[i];
         }
-        if(i==j)
-        count++;
+        else
+        {
+            odd=odd+arr[i];
+        }
     }
-    printf("%d",count);
+    printf("Sum of Even:%d\n",even);
+    printf("Sum of Odd :%d",odd);
     return 0;
 }
+

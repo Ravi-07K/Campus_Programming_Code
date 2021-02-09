@@ -1,23 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int n,count=0,i,j;
+    int n,i,target;
     scanf("%d",&n);
     int arr[n];
     for(i=0; i<n; i++)
     {
         scanf("%d",&arr[i]);
     }
+    scanf("%d",&target);
     for(i=0; i<n; i++)
     {
-        for(j=0; j<i; j++)
+        if(arr[i]==target)
         {
-            if(arr[i]==arr[j])
-                break;
+            printf("%d",i);
         }
-        if(i==j)
-        count++;
     }
-    printf("%d",count);
     return 0;
 }
